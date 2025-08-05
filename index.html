@@ -1,1365 +1,918 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aksel - Backend Developer</title>
+    <title>Aksel - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#FF6101',
-                        dark: '#101827',
+                        primary: '#06b6d4',
+                        secondary: '#8b5cf6',
+                        accent: '#ec4899'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="bg-white dark:bg-dark text-gray-800 dark:text-gray-200 transition-colors duration-300">
-    <div class="min-h-screen flex flex-col">
-        <!-- Navigation -->
-        <header class="sticky top-0 left-0 right-0 z-50 bg-white dark:bg-dark border-b border-gray-200 dark:border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-20">
+<body class="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gradient-to-r from-emerald-900 via-teal-800 to-cyan-800 z-50 shadow-2xl border-b-2 border-emerald-400/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
                     <div class="flex items-center">
-                        <a href="#" class="text-2xl font-bold text-primary">Aksel</a>
+                        <div>
+                            <h1 class="text-3xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Aksel</h1>
+                            <p class="text-emerald-200 text-xs font-medium">AI Innovator</p>
+                        </div>
                     </div>
-                    <!-- Desktop Navigation -->
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <a href="#about" class="text-gray-600 dark:text-gray-400">About</a>
-                        <a href="#skills" class="text-gray-600 dark:text-gray-400">Skills</a>
-                        <a href="#projects" class="text-gray-600 dark:text-gray-400">Projects</a>
-                        <a href="#experience" class="text-gray-600 dark:text-gray-400">Experience</a>
-                        <a href="#education" class="text-gray-600 dark:text-gray-400">Education</a>
-                        <a href="#contact" class="text-gray-600 dark:text-gray-400">Contact</a>
-                        <button id="theme-toggle" class="p-2 rounded-lg text-gray-800 dark:text-white">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                            </svg>
-                        </button>
-                    </nav>
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-800 dark:text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
                 </div>
-            </div>
-        </header>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-1">
+                        <a href="#home" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Home</a>
+                        <a href="#about" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">About</a>
+                        <a href="#projects" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Projects</a>
+                        <a href="#skills" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Skills</a>
+                        <a href="#experience" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Experience</a>
+                        <a href="#services" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Services</a>
+                        <a href="#linkai" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">LinkAI</a>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-dark w-full h-full transform -translate-x-full transition-transform duration-300 ease-in-out z-[60] md:hidden">
-            <div class="sticky flex-col h-full">
-                <div class="sticky justify-between items-center p-4 border-b border-gray-200 dark:border-gray-800">
-                    <a href="#" class="text-2xl font-bold text-primary">Aksel</a>
-                    <button id="close-menu" class="p-2 rounded-lg text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-emerald-100 hover:text-white p-3 rounded-xl hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
-                <nav class="flex-1 p-4 space-y-4 overflow-y-auto">
-                    <a href="#about" class="block text-xl text-white">About</a>
-                    <a href="#skills" class="block text-xl text-white">Skills</a>
-                    <a href="#projects" class="block text-xl text-white">Projects</a>
-                    <a href="#experience" class="block text-xl text-white">Experience</a>
-                    <a href="#education" class="block text-xl text-white">Education</a>
-                    <a href="#contact" class="block text-xl text-white">Contact</a>
-                    <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
-                        <button id="mobile-theme-toggle" class="w-full flex items-center justify-center p-2 rounded-lg text-white">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </nav>
             </div>
         </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-emerald-900 to-teal-800 border-t-2 border-emerald-400/30 shadow-2xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Home</a>
+                <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">About</a>
+                <a href="#projects" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Projects</a>
+                <a href="#skills" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Skills</a>
+                <a href="#experience" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Experience</a>
+                <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Services</a>
+                <a href="#linkai" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">LinkAI</a>
 
-        <!-- Hero Section -->
-        <section id="about" class="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 md:pt-48">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-                <div class="text-left order-2 lg:order-1">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                        <span id="typing-text" class="text-primary"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - New Design -->
+    <section id="home" class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 animate-gradient"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-float-slow"></div>
+        </div>
+        
+        <!-- Animated Floating Elements -->
+        <div class="absolute top-20 left-20 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-40 h-40 bg-teal-500/20 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl animate-float" style="animation-delay: 6s;"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-28 h-28 bg-teal-500/20 rounded-full blur-xl animate-float" style="animation-delay: 8s;"></div>
+        
+        <!-- Additional Animated Elements -->
+        <div class="absolute top-10 right-10 w-16 h-16 bg-cyan-500/15 rounded-full blur-lg animate-pulse-slow"></div>
+        <div class="absolute bottom-10 left-10 w-20 h-20 bg-emerald-500/15 rounded-full blur-lg animate-pulse-slow" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/4 left-1/2 w-12 h-12 bg-teal-500/15 rounded-full blur-lg animate-pulse-slow" style="animation-delay: 6s;"></div>
+        
+        <!-- Moving Particles -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/30 rounded-full animate-particle-1"></div>
+            <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-teal-400/40 rounded-full animate-particle-2"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-400/35 rounded-full animate-particle-3"></div>
+            <div class="absolute top-2/3 right-1/4 w-1 h-1 bg-emerald-400/30 rounded-full animate-particle-4"></div>
+            <div class="absolute bottom-1/3 right-1/2 w-1.5 h-1.5 bg-teal-400/35 rounded-full animate-particle-5"></div>
+        </div>
+        
+        <!-- Animated Grid Lines -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-scan-line"></div>
+            <div class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent animate-scan-line" style="animation-delay: 2s;"></div>
+            <div class="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-line" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+            <div class="w-full">
+                <!-- Main Content -->
+                <div class="text-center max-w-4xl mx-auto">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-emerald-400/30 mb-8">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full mr-2"></div>
+                        <span class="text-emerald-100 text-sm font-medium">Available for opportunities</span>
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                        <span class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                            Aksel
+                        </span>
                     </h1>
-                    <div class="space-y-4 sm:space-y-6">
-                        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400">Hi, my name is Aksel, and I'm a
-                            16-year-old
-                            junior backend developer. I started my programming journey at the age of 14 and have been
-                            passionate about technology ever since. Currently, I'm studying at an information college in
-                            Armenia, further building my skills and knowledge.</p>
-                        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400">From a young age, I've enjoyed
-                            working with
-                            computers and exploring how things work in tech. Today, I focus on creating modern, scalable
-                            web applications while continuously learning new technologies to grow as a professional.
-                            Additionally, I am deeply interested in working with Unreal Engine and AI using C++, aiming
-                            to develop innovative projects in game development and artificial intelligence.</p>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-2xl md:text-3xl text-emerald-200 mb-8 font-light">
+                        Junior Back-End Developer & Deep Learning Explorer
+                    </p>
+                    
+                    <!-- Description -->
+                    <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Passionate about building intelligent systems and creating technology that makes a real impact. 
+                        Founder of LinkAI, developing next-generation AI solutions from Armenia.
+                    </p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                        <a href="#projects" class="group relative px-8 py-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-xl font-medium hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-code mr-2"></i>
+                                View My Work
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        <a href="#linkai" class="group relative px-8 py-4 border-2 border-emerald-400/30 text-emerald-200 rounded-xl font-medium hover:bg-emerald-500/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-brain mr-2"></i>
+                                Learn About LinkAI
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-2xl mx-auto">
+                        <div class="text-center group">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">1+</div>
+                            <div class="text-emerald-200 text-sm">Years Experience</div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">10+</div>
+                            <div class="text-emerald-200 text-sm">Projects</div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">12+</div>
+                            <div class="text-emerald-200 text-sm">Technologies</div>
+                        </div>
+                        <div class="text-center group">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">AI</div>
+                            <div class="text-emerald-200 text-sm">Specialist</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://github.com/AkseL588" class="group p-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-emerald-400/30 text-emerald-200 hover:bg-emerald-500/30 transition-all duration-300 transform hover:scale-110" title="GitHub">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="group p-3 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 backdrop-blur-sm border border-teal-400/30 text-teal-200 hover:bg-teal-500/30 transition-all duration-300 transform hover:scale-110" title="LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://aksel588.github.io/aksel_portfolio/" class="group p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 backdrop-blur-sm border border-cyan-400/30 text-cyan-200 hover:bg-cyan-500/30 transition-all duration-300 transform hover:scale-110" title="Portfolio">
+                            <i class="fas fa-globe text-xl"></i>
+                        </a>
+                        <a href="mailto:akseldeveloper8@gmail.com" class="group p-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm border border-emerald-400/30 text-emerald-200 hover:bg-emerald-500/30 transition-all duration-300 transform hover:scale-110" title="Email">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
                     </div>
                 </div>
-                <!-- Image Container -->
-                <div class="relative w-full max-w-md mx-auto lg:max-w-none order-1 lg:order-2 mb-8 lg:mb-0">
-                    <div class="relative group">
-                        <!-- Gradient Border -->
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-500 rounded-3xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
-                        </div>
-                        <!-- Image Container -->
-                        <div
-                            class="relative aspect-square w-full bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-primary/20 transition-all duration-500">
-                            <!-- Image -->
-                            <div class="absolute inset-0 flex items-center justify-center p-4">
-                                <img src="./img/profile.jpg" alt="Profile"
-                                    class="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="flex flex-col items-center text-emerald-200">
+                
+                <div class="w-6 h-10 border-2 border-emerald-400/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-gradient-to-b from-emerald-400 to-teal-400 rounded-full mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-900">Who I Am</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        I'm **Aksel**, a passionate Junior Back-End Developer and aspiring AI Researcher from **Armenia**, dedicated to building intelligent systems, exploring deep learning, and creating technology that truly makes an impact.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        With over **1 year of hands-on experience** in full-stack development, I have built **scalable, maintainable applications** using technologies like **PHP, Laravel, MySQL, and Python**. I thrive on solving real-world problems through code, and I constantly seek to expand my expertise — especially in Artificial Intelligence, automation, and game development.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Currently, I focus on **Artificial Intelligence and Machine Learning**, with a strong focus on modern AI frameworks, large language models, and automation systems. I combine my backend development skills with AI to create next-generation intelligent applications as the founder of **LinkAI**.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="mailto:akseldeveloper8@gmail.com" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 text-white shadow-xl">
+                        <h4 class="text-xl font-semibold mb-4">Quick Facts</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span>Experience:</span>
+                                <span>1+ Years</span>
                             </div>
-                            <!-- Decorative Elements -->
-                            <div
-                                class="absolute -bottom-4 -right-4 w-16 h-16 sm:w-24 sm:h-24 bg-primary rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+                            <div class="flex justify-between">
+                                <span>Projects:</span>
+                                <span>10+ Completed</span>
                             </div>
-                            <div
-                                class="absolute -top-4 -left-4 w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+                            <div class="flex justify-between">
+                                <span>Technologies:</span>
+                                <span>12+ Mastered</span>
                             </div>
-                            <!-- Hover Overlay -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="flex justify-between">
+                                <span>Location:</span>
+                                <span>Armenia</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Skills & Technologies</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A comprehensive overview of my
-                        technical expertise and capabilities.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Front-End -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Front-End Development</h3>
-                        <ul class="space-y-2">
-                            <li>HTML, CSS, Bootstrap, Tailwind CSS</li>
-                            <li>JavaScript, jQuery, AJAX</li>
-                        </ul>
-                    </div>
-
-                    <!-- Back-End -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Back-End Development</h3>
-                        <ul class="space-y-2">
-                            <li>PHP, OOP, MVC</li>
-                            <li>Laravel (Routing, Middleware, Eloquent ORM, Blade, API development)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Databases -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Databases</h3>
-                        <ul class="space-y-2">
-                            <li>MySQL (Database design, indexing, optimization)</li>
-                            <li>MongoDB (NoSQL databases, flexible data structures)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Version Control -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Version Control & Deployment</h3>
-                        <ul class="space-y-2">
-                            <li>Git, GitHub (Branching, merging, CI/CD)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Programming Languages -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">Programming Languages</h3>
-                        <ul class="space-y-2">
-                            <li>C++ (Algorithms, data structures, problem-solving)</li>
-                            <li>Python (AI, automation, web scraping, API development)</li>
-                        </ul>
-                    </div>
-
-                    <!-- AI & ML -->
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-primary">AI & Machine Learning</h3>
-                        <ul class="space-y-2">
-                            <li>LLMs (Llama, OpenAI API, LangChain)</li>
-                            <li>TensorFlow, PyTorch (Deep learning, model training)</li>
-                            <li>Vector Databases (Pinecone, Weaviate, Qdrant)</li>
-                            <li>RAG (Retrieval-Augmented Generation for AI chatbots)</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-br from-teal-50 via-cyan-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">My Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        My Projects</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Here are some of the projects
-                        I've worked on, showcasing my skills and expertise.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">Web
-                                Development</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Nous-Shop E-commerce Platform</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">A full-featured e-commerce platform built with
-                            Laravel, featuring user authentication, product management, shopping cart functionality, and
-                            secure payment processing.</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">PHP</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Laravel</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">MySQL</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">JavaScript</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Aksel588/Nous-Shop"
-                                class="inline-flex items-center text-primary hover:opacity-80 transition-opacity">
-                                <span>View Project</span>
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-emerald-400 to-teal-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-teal-600/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                            Featured
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">AI
-                                & ML</span>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">LinkAI - AI Startup</h3>
+                        <p class="text-gray-600 mb-4">Founder of LinkAI, building intelligent tools powered by LLMs and automation. Created linkai-aion Python library for clean AI utilities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">LLMs</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">Automation</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Voice to Code Assistant</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">An AI-powered coding assistant that converts
-                            voice commands into code, featuring natural language processing and code generation
-                            capabilities.</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Python</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">OpenAI
-                                        API</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Pinecone</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">LangChain</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Aksel588/voice-to-code-assistant"
-                                class="inline-flex items-center text-primary hover:opacity-80 transition-opacity">
-                                <span>View Project</span>
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">Telegram
-                                Bot</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Crypto Price Tracker Bot</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">A Telegram bot that tracks cryptocurrency
-                            prices in real-time, providing users with price alerts, market trends, and portfolio
-                            management features.</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Python</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Telegram
-                                        API</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Crypto
-                                        APIs</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Aksel588/TelegramBot_Crypto_Coins"
-                                class="inline-flex items-center text-primary hover:opacity-80 transition-opacity">
-                                <span>View Project</span>
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">Game
-                                Development</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Casino Game Simulator</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">A C++ based casino game simulator featuring
-                            multiple classic games including blackjack, poker, and slot machines with realistic odds and
-                            gameplay mechanics.</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">C++</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">OOP</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Aksel588/Program-to-implement-Casino-Game-C-"
-                                class="inline-flex items-center text-primary hover:opacity-80 transition-opacity">
-                                <span>View Project</span>
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">Database
-                                Management</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Profile Management System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">A Python-based system for managing user
-                            profiles and shopping data using MongoDB, featuring CRUD operations, data validation, and
-                            secure authentication.</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Python</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">MongoDB</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">PyMongo</span>
-                                </div>
-                            </div>
-                            <a href="https://github.com/Aksel588/Managing-Profiles-and-Shopping-with-Python-and-MongoDB"
-                                class="inline-flex items-center text-primary hover:opacity-80 transition-opacity">
-                                <span>View Project</span>
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Work Experience</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">My journey in programming and
-                        development.</p>
-                </div>
-                <div class="space-y-12">
-                    <!-- Current Project -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Educational Web Application
-                                </h3>
-                                <p class="text-primary font-medium">Laravel 11 Project</p>
-                            </div>
-                            <div class="mt-2 md:mt-0">
-                                <span
-                                    class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">Current
-                                    Project</span>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <p class="text-gray-600 dark:text-gray-400">A comprehensive web application designed for
-                                educational purposes, enabling teachers to create programming tests for students and
-                                allowing students to solve these tests.</p>
-                            <div class="space-y-2">
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500">Key Features</h4>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li>Result tracking and analytics</li>
-                                    <li>Test customization and management</li>
-                                    <li>Intuitive user interface</li>
-                                    <li>Teacher and student dashboards</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Laravel
-                                        11</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">PHP</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">MySQL</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Early Projects -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Early Development Journey
-                                </h3>
-                                <p class="text-primary font-medium">Web Development & Programming</p>
-                            </div>
-                            <div class="mt-2 md:mt-0">
-                                <span
-                                    class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">2021
-                                    - Present</span>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <p class="text-gray-600 dark:text-gray-400">Started my programming journey by completing a
-                                web development course, which laid the foundation for my backend development skills.</p>
-                            <div class="space-y-2">
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500">Key Projects</h4>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li>Shop application using PHP with product management and user authentication</li>
-                                    <li>Various projects in Python, C++, and JavaScript</li>
-                                    <li>Learning Unreal Engine and C++ for game development and AI</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Technologies
-                                    Used</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">PHP</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Python</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">C++</span>
-                                    <span
-                                        class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">JavaScript</span>
-                                    <span class="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-700">Unreal
-                                        Engine</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Education</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">My academic journey and
-                        continuous learning path.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Digi School -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">2023
-                                - 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Digi School</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Studied Programming</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Key Focus Areas
-                                </h4>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li>Programming Fundamentals</li>
-                                    <li>Web Development Basics</li>
-                                    <li>Problem Solving</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Information College -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">2024
-                                - Present</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Information College</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Full-time Student</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Key Focus Areas
-                                </h4>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li>Advanced Programming</li>
-                                    <li>System Architecture</li>
-                                    <li>Database Management</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Global IT Company -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <div class="mb-6">
-                            <span
-                                class="inline-block px-4 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">2024
-                                - Present</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Global IT Company</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Part-time Learning</p>
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-500 mb-2">Key Focus Areas
-                                </h4>
-                                <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-                                    <li>Industry Best Practices</li>
-                                    <li>Professional Development</li>
-                                    <li>Team Collaboration</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Soft Skills Section -->
-        <section id="soft-skills" class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Soft Skills</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Essential skills that
-                        complement my technical expertise.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Communication -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Communication Skills</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Ability to clearly convey ideas, technical concepts,
-                            and project updates to both technical and non-technical stakeholders.</p>
-                    </div>
-
-                    <!-- Problem Solving -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Problem-Solving</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Ability to analyze challenges and find innovative
-                            solutions, especially when faced with unexpected obstacles during development.</p>
-                    </div>
-
-                    <!-- Time Management -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Time Management</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Ability to prioritize tasks effectively, meet
-                            deadlines, and manage time efficiently, especially when juggling multiple projects.</p>
-                    </div>
-
-                    <!-- Teamwork -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-4 text-primary">Teamwork & Collaboration</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Experience working with cross-functional teams
-                            (e.g., developers, designers, product managers) to complete projects successfully.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack Section -->
-        <section id="tech-stack" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        My Tech Stack</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The technologies and tools I
-                        use to build modern applications.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Backend Stack -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Backend Development</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">PHP</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">PHP & Laravel</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Building scalable web
-                                        applications with modern PHP frameworks</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">DB</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Databases</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">MySQL, MongoDB, and database
-                                        optimization</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI & ML Stack -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">AI & Machine Learning</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">AI</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">LLMs & RAG</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Building intelligent
-                                        applications with large language models</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">ML</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Machine Learning</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Python, TensorFlow, and deep
-                                        learning</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Game Development -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Game Development</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">UE</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Unreal Engine</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Creating immersive gaming
-                                        experiences</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                    <span class="text-xl font-bold text-primary">C++</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">C++ Development</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">High-performance game mechanics
-                                        and AI</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Learning Journey Section -->
-        <section id="learning" class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Learning Journey</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Resources and recommendations
-                        that have helped me grow as a developer.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Online Courses -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Online Courses</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Laravel Mastery</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Advanced Laravel concepts and
-                                        best practices</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">AI & ML Fundamentals</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Understanding machine learning
-                                        algorithms</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Books & Resources -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Books & Resources</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Clean Code</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Best practices for writing
-                                        maintainable code</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">AI & Game Development</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Integrating AI in game
-                                        development</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Current Focus Section -->
-        <section id="current-focus" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Current Focus</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">What I'm currently working on
-                        and learning.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Projects -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Active Projects</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Educational Platform</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Building a comprehensive
-                                        learning management system</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">AI Integration</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Implementing AI features in
-                                        existing applications</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Learning -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Learning Goals</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Unreal Engine</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Mastering game development with
-                                        Unreal Engine</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Advanced AI</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Deep learning and neural
-                                        networks</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Goals Section -->
-        <section id="future-goals" class="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Future Goals</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">My aspirations and where I see
-                        myself in the future.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Short Term -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Short Term</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Complete Educational Platform</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Launch and optimize the learning
-                                        management system</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Master Unreal Engine Basics</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Build first game prototype</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Medium Term -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Medium Term</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">AI Integration Projects</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Develop AI-powered applications
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Game Development</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Create first complete game</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Long Term -->
-                    <div
-                        class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Long Term</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">AI Research</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Contribute to AI advancements
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-4">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Game Studio</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Establish own game development
-                                        studio</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tools & Resources Section -->
-        <section id="tools" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Tools & Resources</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">My favorite tools and
-                        resources for development.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Development Tools -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Development</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>VS Code</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Git & GitHub</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Docker</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Web Development -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Web Development</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Laravel</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>PHP</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>MySQL</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Telegram Bot -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Telegram Bot</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Telegram Bot API</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Python-telegram-bot</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Bot Development</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- AI Tools -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">AI & ML</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>OpenAI API</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Pinecone</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>LangChain</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Game Dev Tools -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Game Development</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Unreal Engine</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Blender</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Visual Studio</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Learning Resources -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold mb-6 text-primary">Learning</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Udemy</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>YouTube</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <span class="w-2 h-2 rounded-full bg-primary"></span>
-                                <span>Documentation</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact"
-            class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2
-                        class="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-500">
-                        Let's Work Together</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">I'm always excited to
-                        collaborate on new projects. Feel free to reach out through any of these channels.</p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Direct Contact -->
-                    <div
-                        class="bg-white dark:bg-gray-800 p-10 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-                        <h3 class="text-3xl font-bold mb-8 text-primary">Direct Contact</h3>
-                        <div class="space-y-8">
-                            <div class="flex items-start space-x-6">
-                                <div
-                                    class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold mb-2">Email Me</h4>
-                                    <a href="mailto:your.email@example.com"
-                                        class="text-lg text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">akseldeveloper8@gmail.com</a>
-                                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">I typically respond within
-                                        24 hours</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-6">
-                                <div
-                                    class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                        </path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-semibold mb-2">Location</h4>
-                                    <p class="text-lg text-gray-600 dark:text-gray-400">Armenia</p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">Available for remote work
-                                        worldwide</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social & Professional -->
-                    <div class="space-y-8">
-                        <!-- Professional Networks -->
-                        <div
-                            class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                            <h3 class="text-2xl font-bold mb-6">Professional Networks</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <a href="https://github.com/Aksel588" target="_blank"
-                                    class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <span class="font-medium">GitHub</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-500">@Aksel588</p>
-                                    </div>
-                                </a>
-                                <a href="https://www.linkedin.com/in/aksel-aghajanyan/" target="_blank"
-                                    class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <span class="font-medium">LinkedIn</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-500">@aksel-aghajanyan</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Social Media -->
-                        <div
-                            class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                            <h3 class="text-2xl font-bold mb-6">Social Media</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <a href="https://x.com/AkselDeveloper" target="_blank"
-                                    class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <span class="font-medium">Twitter</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-500">@AkselDeveloper</p>
-                                    </div>
-                                </a>
-                                <a href="https://www.instagram.com/akse1.ai/" target="_blank"
-                                    class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-                                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <span class="font-medium">Instagram</span>
-                                        <p class="text-sm text-gray-500 dark:text-gray-500">@akse1.ai</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="mt-auto bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="md:col-span-2">
-                        <h3 class="text-xl font-bold text-primary mb-4">Aksel</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Junior Backend Developer passionate about
-                            creating efficient and scalable web applications. Specializing in AI and Machine Learning
-                            solutions.</p>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/yourusername" target="_blank"
-                                class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
+                            <a href="https://pypi.org/project/linkai-aion/" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-python"></i> PyPI
                             </a>
-                            <a href="https://linkedin.com/in/yourusername" target="_blank"
-                                class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
+                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-primary mb-4">Expertise</h3>
-                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
-                            <li>Backend Development</li>
-                            <li>AI & Machine Learning</li>
-                            <li>Database Design</li>
-                            <li>API Development</li>
-                            <li>System Architecture</li>
-                        </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                            Backend
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-primary mb-4">AI & ML Stack</h3>
-                        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
-                            <li>Large Language Models</li>
-                            <li>Vector Databases</li>
-                            <li>Deep Learning</li>
-                            <li>RAG Systems</li>
-                            <li>AI Automation</li>
-                        </ul>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Casino Game & Profile Manager</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive system that integrates C++ casino games with Python and MongoDB for managing user profiles and shopping systems.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div
-                    class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">
-                    <p>&copy; 2024 Aksel. All rights reserved.</p>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 to-cyan-600/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                            AI Tool
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Voice-to-Code Assistant</h3>
+                        <p class="text-gray-600 mb-4">An AI-powered tool that converts voice commands into code across multiple programming languages including Python, Java, C++, and JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Voice Recognition</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                            Bot
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram Crypto Bot</h3>
+                        <p class="text-gray-600 mb-4">A Telegram bot for cryptocurrency tracking and management with real-time price updates and trading features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Telegram API</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Crypto API</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fas fa-external-link-alt"></i> Bot
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-cyan-400 to-emerald-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-emerald-600/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+                            AI Translator
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Multilingual Translator</h3>
+                        <p class="text-gray-600 mb-4">AI-powered multilingual translator supporting text, voice, and PDF translation with real-time voice recognition and language detection.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">AI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Jupyter</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Skills & Technologies</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- AI & ML -->
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-brain text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI & Machine Learning</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">Python, PyTorch, TensorFlow</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">LLaMA, OpenAI API, LangChain</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">RAG, Vector DBs (Qdrant, Pinecone)</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">NumPy, Pandas, scikit-learn</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">OpenCV, Keras</p>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-green-100 to-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-server text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="hover:text-teal-600 transition-colors cursor-default">PHP, Laravel, REST APIs</p>
+                        <p class="hover:text-teal-600 transition-colors cursor-default">Eloquent ORM, MVC Architecture</p>
+                        <p class="hover:text-teal-600 transition-colors cursor-default">Python, FastAPI, Django</p>
+                        <p class="hover:text-teal-600 transition-colors cursor-default">Docker, Laravel Sail</p>
+                        <p class="hover:text-teal-600 transition-colors cursor-default">Git, GitHub, CI/CD</p>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-database text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Databases</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="hover:text-cyan-600 transition-colors cursor-default">MySQL (Schema, Performance)</p>
+                        <p class="hover:text-cyan-600 transition-colors cursor-default">MongoDB (Document Storage)</p>
+                        <p class="hover:text-cyan-600 transition-colors cursor-default">Redis (Caching)</p>
+                        <p class="hover:text-cyan-600 transition-colors cursor-default">Vector Databases</p>
+                        <p class="hover:text-cyan-600 transition-colors cursor-default">Qdrant, Pinecone, Weaviate</p>
+                    </div>
+                </div>
+
+                <!-- Advanced Tech -->
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <i class="fas fa-microchip text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Advanced Tech</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">NVIDIA CUDA, Triton Server</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">TensorRT, GPU Acceleration</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">Telegram Bot API</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">Unreal Engine 5, C++</p>
+                        <p class="hover:text-emerald-600 transition-colors cursor-default">Swift, Apple Silicon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkAI Section -->
+    <section id="linkai" class="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-100/20 via-teal-100/20 to-cyan-100/20"></div>
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-cyan-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-100 to-teal-100 px-6 py-3 rounded-full mb-6">
+                    <div class="w-3 h-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-700 font-semibold text-sm">AI Startup</span>
+                </div>
+                <h2 class="text-5xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6">About LinkAI</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Revolutionizing AI development with cutting-edge solutions and innovative automation tools</p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Mission Card -->
+                <div class="lg:col-span-2 bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-emerald-100/50 hover:shadow-2xl transition-all duration-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-rocket text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Our Mission</h3>
+                            <p class="text-emerald-600 font-medium">Building the Future of AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                        LinkAI is an innovative AI startup co-founded by Aksel, dedicated to developing next-generation intelligent systems and automation solutions. We focus on creating practical, scalable AI tools that solve real-world problems and empower developers worldwide.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-8 text-lg">
+                        Our flagship product, <strong class="text-emerald-600">LinkAI Aion</strong>, is a comprehensive Python library that provides clean, efficient utilities for working with Large Language Models (LLMs), automation workflows, and AI-powered applications.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-emerald-600 mb-2">100+</div>
+                            <div class="text-sm text-gray-600">Active Users</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-teal-600 mb-2">50+</div>
+                            <div class="text-sm text-gray-600">Features</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cyan-600 mb-2">24/7</div>
+                            <div class="text-sm text-gray-600">Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Card -->
+                <div class="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+                    
+                    <h4 class="text-2xl font-bold mb-8 relative z-10">Key Features</h4>
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-brain text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">LLM Integration</p>
+                                <p class="text-emerald-100 text-sm leading-relaxed">Seamless OpenAI API and LangChain integration with advanced prompt management</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-cogs text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Automation Tools</p>
+                                <p class="text-teal-100 text-sm leading-relaxed">Powerful workflow automation capabilities with custom triggers and actions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-database text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Vector Databases</p>
+                                <p class="text-cyan-100 text-sm leading-relaxed">RAG implementation with Qdrant and Pinecone for intelligent search</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Clean Architecture</p>
+                                <p class="text-emerald-100 text-sm leading-relaxed">Well-structured, maintainable codebase with comprehensive documentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Core Values -->
+                <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-teal-100/50">
+                    <h4 class="text-2xl font-bold text-gray-900 mb-8">Core Values</h4>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Innovation</p>
+                                <p class="text-gray-600 text-sm">Pushing boundaries in AI technology</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Community</p>
+                                <p class="text-gray-600 text-sm">Open source collaboration and support</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Quality</p>
+                                <p class="text-gray-600 text-sm">Enterprise-grade reliability and performance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links & Resources -->
+                <div class="bg-gradient-to-br from-teal-600 via-cyan-600 to-emerald-600 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 -translate-x-10"></div>
+                    
+                    <h4 class="text-2xl font-bold mb-8 relative z-10">Get Started</h4>
+                    <p class="text-emerald-100 mb-8 relative z-10">Join our community and start building with LinkAI Aion today.</p>
+                    
+                    <div class="space-y-4 relative z-10">
+                        <a href="https://pypi.org/project/linkai-aion/" class="flex items-center justify-between bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-4 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center space-x-4">
+                                <i class="fab fa-python text-2xl"></i>
+                                <div>
+                                    <p class="font-semibold">Install from PyPI</p>
+                                    <p class="text-emerald-100 text-sm">pip install linkai-aion</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        
+                        <a href="https://github.com/AkseL588" class="flex items-center justify-between bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-4 rounded-xl transition-all duration-300 group">
+                            <div class="flex items-center space-x-4">
+                                <i class="fab fa-github text-2xl"></i>
+                                <div>
+                                    <p class="font-semibold">View on GitHub</p>
+                                    <p class="text-teal-100 text-sm">Open source repository</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Experience & Timeline</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4">My journey in technology and AI development</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <!-- Experience Item 1 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-rocket text-white text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Co-Founder</h3>
+                            <p class="text-emerald-600 font-medium mb-1">LinkAI • Full-time</p>
+                            <p class="text-gray-500 text-sm mb-3">Jul 2025 - Present • 2 mos</p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Co-founding LinkAI, leading startup ventures and startup leadership. 
+                                Managing global IT operations and driving innovation in AI technology solutions.
+                            </p>
+                            <div class="mt-3">
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">Start-up Ventures</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">Start-up Leadership</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+6 skills</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-building text-white text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Back End Developer</h3>
+                            <p class="text-teal-600 font-medium mb-1">Global IT Company • Part-time</p>
+                            <p class="text-gray-500 text-sm mb-3">Nov 2024 - Present • 10 mos</p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Working as a part-time backend developer, specializing in PHP and MySQL development. 
+                                Contributing to global IT projects and maintaining high-quality code standards.
+                            </p>
+                            <div class="mt-3">
+                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">PHP</span>
+                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">MySQL</span>
+                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+1 skill</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-code text-white text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Back End Developer</h3>
+                            <p class="text-cyan-600 font-medium mb-1">Internship</p>
+                            <p class="text-gray-500 text-sm mb-3">Sep 2024 - Nov 2024 • 3 mos</p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Completed a 3-month internship as a backend developer, gaining hands-on experience with 
+                                AJAX, JavaScript, and various web development technologies.
+                            </p>
+                            <div class="mt-3">
+                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">AJAX</span>
+                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">JavaScript</span>
+                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+10 skills</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item -->
+                    <div class="flex items-start space-x-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-white text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Web Developer</h3>
+                            <p class="text-emerald-600 font-medium mb-1">DiGi School</p>
+                            <p class="text-gray-500 text-sm mb-3">May 2023 - Dec 2023</p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Completed comprehensive web development training at DiGi School, 
+                                mastering JavaScript, HTML5, and various modern web technologies.
+                            </p>
+                            <div class="mt-3">
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">JavaScript</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">HTML5</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+14 skills</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-teal-50 via-cyan-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Services I Offer</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4">Comprehensive solutions for your AI and development needs</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Custom AI solutions including LLM integration, automation workflows, and intelligent applications using modern frameworks.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>LLM Integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>Automation Systems</li>
+                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>RAG Implementation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-teal-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Scalable backend systems, APIs, and database architectures using PHP, Laravel, Python, and modern development practices.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>REST APIs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>Database Design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>System Architecture</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Consulting</h3>
+                    <p class="text-gray-600 mb-6">
+                        Technical consulting for AI implementation, system optimization, and technology strategy for startups and businesses.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>AI Strategy</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>Technical Planning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-emerald-950 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 via-teal-600/10 to-cyan-600/10"></div>
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-teal-500/10 rounded-full blur-xl"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="py-20">
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Brand Section -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 rounded-2xl flex items-center justify-center mr-6 shadow-xl">
+                                <i class="fas fa-robot text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Aksel</h3>
+                                <p class="text-emerald-200 text-lg font-medium">LinkAI Founder & AI Innovator</p>
+                            </div>
+                        </div>
+                        <p class="text-emerald-100 mb-8 leading-relaxed text-lg">
+                            Founder of LinkAI, an innovative AI startup dedicated to building intelligent systems and automation solutions. 
+                            We develop next-generation AI tools that solve real-world problems, with our flagship product linkai-aion available on PyPI.
+                        </p>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/AkseL588" class="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="GitHub">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="group bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="LinkedIn">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="https://aksel588.github.io/aksel_portfolio/" class="group bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="Portfolio">
+                                <i class="fas fa-globe text-2xl"></i>
+                            </a>
+                            <a href="mailto:akseldeveloper8@gmail.com" class="group bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="Email">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/20">
+                        <h4 class="text-xl font-bold mb-6 text-white">Quick Links</h4>
+                        <div class="space-y-4">
+                            <a href="#home" class="block text-emerald-100 hover:text-white transition-colors font-medium">Home</a>
+                            <a href="#about" class="block text-emerald-100 hover:text-white transition-colors font-medium">About</a>
+                            <a href="#projects" class="block text-emerald-100 hover:text-white transition-colors font-medium">Projects</a>
+                            <a href="#skills" class="block text-emerald-100 hover:text-white transition-colors font-medium">Skills</a>
+                            <a href="#experience" class="block text-emerald-100 hover:text-white transition-colors font-medium">Experience</a>
+                            <a href="#services" class="block text-emerald-100 hover:text-white transition-colors font-medium">Services</a>
+                            <a href="#linkai" class="block text-emerald-100 hover:text-white transition-colors font-medium">LinkAI</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LinkAI Products Section -->
+            <div class="py-12 border-t border-emerald-400/20">
+                <div class="text-center mb-8">
+                    <h4 class="text-2xl font-bold text-white mb-2">LinkAI Products</h4>
+                    <p class="text-emerald-200">Building the future of AI-powered solutions</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-emerald-700/50 to-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-python text-white text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold text-white mb-2">Python Library</h5>
+                        <p class="text-emerald-200 text-sm">linkai-aion</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-teal-700/50 to-cyan-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-400/20 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-white text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold text-white mb-2">AI Solutions</h5>
+                        <p class="text-teal-200 text-sm">LLMs & Automation</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-cyan-700/50 to-emerald-700/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20 text-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        <h5 class="text-lg font-semibold text-white mb-2">Open Source</h5>
+                        <p class="text-cyan-200 text-sm">Available on PyPI</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-emerald-400/20 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-emerald-300 text-sm">&copy; 2024 Aksel Aghajanyan. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-8">
+                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Privacy Policy</a>
+                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Terms of Service</a>
+                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-
-</html>
+</html> 
