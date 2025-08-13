@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aksel - Portfolio</title>
+    <title>Aksel - Junior Back-End Developer & Deep Learning Explorer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#06b6d4',
-                        secondary: '#8b5cf6',
-                        accent: '#ec4899'
-                    },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
@@ -21,240 +16,346 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 text-gray-900 font-sans">
+<body class="bg-white text-gray-900 font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gradient-to-r from-emerald-900 via-teal-800 to-cyan-800 z-50 shadow-2xl border-b-2 border-emerald-400/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0">
-                    <div class="flex items-center">
-                        <div>
-                            <h1 class="text-3xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Aksel</h1>
-                            <p class="text-emerald-200 text-xs font-medium">AI Innovator</p>
-                        </div>
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-black rounded-2xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">A</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black text-black">Aksel</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wider uppercase">AI Innovator</p>
                     </div>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-1">
-                        <a href="#home" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Home</a>
-                        <a href="#about" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">About</a>
-                        <a href="#projects" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Projects</a>
-                        <a href="#skills" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Skills</a>
-                        <a href="#experience" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Experience</a>
-                        <a href="#services" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">Services</a>
-                        <a href="#linkai" class="nav-link text-emerald-100 hover:text-white px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-emerald-700/50 backdrop-blur-sm border border-emerald-400/20">LinkAI</a>
-
-                    </div>
+                
+                <div class="hidden lg:flex items-center space-x-12">
+                    <a href="#home" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Projects</a>
+                    <a href="#aqwelai" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Aqwel AI</a>
+                    <a href="#aion" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Aion</a>
+                    <a href="#experience" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-black transition-colors font-medium text-sm tracking-wide">Contact</a>
                 </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-emerald-100 hover:text-white p-3 rounded-xl hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">
-                        <i class="fas fa-bars text-xl"></i>
+                
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-black p-3">
+                        <div class="w-6 h-0.5 bg-current mb-1.5"></div>
+                        <div class="w-6 h-0.5 bg-current mb-1.5"></div>
+                        <div class="w-6 h-0.5 bg-current"></div>
                     </button>
                 </div>
             </div>
         </div>
+        
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-emerald-900 to-teal-800 border-t-2 border-emerald-400/30 shadow-2xl">
-            <div class="px-4 pt-4 pb-6 space-y-2">
-                <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Home</a>
-                <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">About</a>
-                <a href="#projects" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Projects</a>
-                <a href="#skills" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Skills</a>
-                <a href="#experience" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Experience</a>
-                <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">Services</a>
-                <a href="#linkai" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-100 hover:text-white hover:bg-emerald-700/50 transition-colors border border-emerald-400/20">LinkAI</a>
-
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section - New Design -->
-    <section id="home" class="min-h-screen relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-        <!-- Animated Background -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 animate-gradient"></div>
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-float-slow"></div>
-        </div>
-        
-        <!-- Animated Floating Elements -->
-        <div class="absolute top-20 left-20 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-float"></div>
-        <div class="absolute bottom-20 right-20 w-40 h-40 bg-teal-500/20 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-cyan-500/20 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
-        <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl animate-float" style="animation-delay: 6s;"></div>
-        <div class="absolute bottom-1/3 left-1/4 w-28 h-28 bg-teal-500/20 rounded-full blur-xl animate-float" style="animation-delay: 8s;"></div>
-        
-        <!-- Additional Animated Elements -->
-        <div class="absolute top-10 right-10 w-16 h-16 bg-cyan-500/15 rounded-full blur-lg animate-pulse-slow"></div>
-        <div class="absolute bottom-10 left-10 w-20 h-20 bg-emerald-500/15 rounded-full blur-lg animate-pulse-slow" style="animation-delay: 3s;"></div>
-        <div class="absolute top-1/4 left-1/2 w-12 h-12 bg-teal-500/15 rounded-full blur-lg animate-pulse-slow" style="animation-delay: 6s;"></div>
-        
-        <!-- Moving Particles -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/30 rounded-full animate-particle-1"></div>
-            <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-teal-400/40 rounded-full animate-particle-2"></div>
-            <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-400/35 rounded-full animate-particle-3"></div>
-            <div class="absolute top-2/3 right-1/4 w-1 h-1 bg-emerald-400/30 rounded-full animate-particle-4"></div>
-            <div class="absolute bottom-1/3 right-1/2 w-1.5 h-1.5 bg-teal-400/35 rounded-full animate-particle-5"></div>
-        </div>
-        
-        <!-- Animated Grid Lines -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-scan-line"></div>
-            <div class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent animate-scan-line" style="animation-delay: 2s;"></div>
-            <div class="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-scan-line" style="animation-delay: 4s;"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
-            <div class="w-full">
-                <!-- Main Content -->
-                <div class="text-center max-w-4xl mx-auto">
-                    <!-- Badge -->
-                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-emerald-400/30 mb-8">
-                        <div class="w-2 h-2 bg-emerald-400 rounded-full mr-2"></div>
-                        <span class="text-emerald-100 text-sm font-medium">Available for opportunities</span>
-                    </div>
-                    
-                    <!-- Main Heading -->
-                    <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                        <span class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                            Aksel
-                        </span>
-                    </h1>
-                    
-                    <!-- Subtitle -->
-                    <p class="text-2xl md:text-3xl text-emerald-200 mb-8 font-light">
-                        Junior Back-End Developer & Deep Learning Explorer
-                    </p>
-                    
-                    <!-- Description -->
-                    <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-                        Passionate about building intelligent systems and creating technology that makes a real impact. 
-                        Founder of LinkAI, developing next-generation AI solutions from Armenia.
-                    </p>
-                    
-                    <!-- Action Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="#projects" class="group relative px-8 py-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white rounded-xl font-medium hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                            <span class="relative z-10 flex items-center">
-                                <i class="fas fa-code mr-2"></i>
-                                View My Work
-                            </span>
-                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </a>
-                        <a href="#linkai" class="group relative px-8 py-4 border-2 border-emerald-400/30 text-emerald-200 rounded-xl font-medium hover:bg-emerald-500/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                            <span class="relative z-10 flex items-center">
-                                <i class="fas fa-brain mr-2"></i>
-                                Learn About LinkAI
-                            </span>
-                        </a>
-                    </div>
-                    
-                    <!-- Stats Row -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-2xl mx-auto">
-                        <div class="text-center group">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">1+</div>
-                            <div class="text-emerald-200 text-sm">Years Experience</div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100">
+            <div class="px-8 py-8">
+                <!-- Mobile menu header -->
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-black rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">A</span>
                         </div>
-                        <div class="text-center group">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">10+</div>
-                            <div class="text-emerald-200 text-sm">Projects</div>
-                        </div>
-                        <div class="text-center group">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">12+</div>
-                            <div class="text-emerald-200 text-sm">Technologies</div>
-                        </div>
-                        <div class="text-center group">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-1 group-hover:scale-110 transition-transform duration-300">AI</div>
-                            <div class="text-emerald-200 text-sm">Specialist</div>
+                        <div>
+                            <h3 class="text-lg font-black text-black">Aksel</h3>
+                            <p class="text-xs text-gray-500 font-medium tracking-wide uppercase">AI Innovator</p>
                         </div>
                     </div>
-                    
-                    <!-- Social Links -->
-                    <div class="flex justify-center space-x-6">
-                        <a href="https://github.com/AkseL588" class="group p-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-emerald-400/30 text-emerald-200 hover:bg-emerald-500/30 transition-all duration-300 transform hover:scale-110" title="GitHub">
-                            <i class="fab fa-github text-xl"></i>
+                    <button id="mobile-close-button" class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-gray-200 transition-colors">
+                        <div class="w-5 h-5 relative">
+                            <div class="w-5 h-0.5 bg-gray-600 absolute top-1/2 left-0 transform -translate-y-1/2 rotate-45"></div>
+                            <div class="w-5 h-0.5 bg-gray-600 absolute top-1/2 left-0 transform -translate-y-1/2 -rotate-45"></div>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- Mobile menu items -->
+                <div class="space-y-2">
+                    <a href="#home" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Home
+                    </a>
+                    <a href="#about" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        About
+                    </a>
+                    <a href="#skills" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Skills
+                    </a>
+                    <a href="#projects" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Projects
+                    </a>
+                    <a href="#experience" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Experience
+                    </a>
+                    <a href="#aqwelai" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Aqwel AI
+                    </a>
+                    <a href="#aion" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Aion
+                    </a>
+                    <a href="#contact" class="flex items-center px-6 py-4 rounded-2xl text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 font-medium text-lg group">
+                        <div class="w-2 h-2 bg-black rounded-full mr-4 group-hover:scale-150 transition-transform"></div>
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile menu footer -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/AkseL588" class="flex-1 px-4 py-3 bg-black text-white rounded-xl font-medium text-center hover:bg-gray-800 transition-colors">
+                            GitHub
                         </a>
-                        <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="group p-3 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 backdrop-blur-sm border border-teal-400/30 text-teal-200 hover:bg-teal-500/30 transition-all duration-300 transform hover:scale-110" title="LinkedIn">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://aksel588.github.io/aksel_portfolio/" class="group p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 backdrop-blur-sm border border-cyan-400/30 text-cyan-200 hover:bg-cyan-500/30 transition-all duration-300 transform hover:scale-110" title="Portfolio">
-                            <i class="fas fa-globe text-xl"></i>
-                        </a>
-                        <a href="mailto:akseldeveloper8@gmail.com" class="group p-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm border border-emerald-400/30 text-emerald-200 hover:bg-emerald-500/30 transition-all duration-300 transform hover:scale-110" title="Email">
-                            <i class="fas fa-envelope text-xl"></i>
+                        <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="flex-1 px-4 py-3 bg-gray-100 text-black rounded-xl font-medium text-center hover:bg-gray-200 transition-colors">
+                            LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 flex items-center relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-black/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-black/3 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-black/2 rounded-full blur-3xl"></div>
+        </div>
         
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="flex flex-col items-center text-emerald-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <div class="inline-flex items-center px-6 py-3 rounded-full bg-black/5 backdrop-blur-sm border border-black/10 mb-12">
+                    <div class="w-2 h-2 bg-black rounded-full mr-3"></div>
+                    <span class="text-sm font-medium text-gray-700 tracking-wide">Available for opportunities</span>
+                </div>
                 
-                <div class="w-6 h-10 border-2 border-emerald-400/50 rounded-full flex justify-center">
-                    <div class="w-1 h-3 bg-gradient-to-b from-emerald-400 to-teal-400 rounded-full mt-2"></div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 sm:mb-8 leading-tight">
+                    <span class="text-black">Aksel</span>
+                </h1>
+                
+                <h2 class="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-8 sm:mb-12 font-light tracking-wide">
+                    Junior Back-End Developer & Deep Learning Explorer
+                </h2>
+                
+                <p class="text-lg sm:text-xl text-gray-500 mb-12 sm:mb-16 max-w-3xl mx-auto leading-relaxed px-4">
+                    I'm a passionate developer from Armenia, dedicated to building intelligent systems, 
+                    exploring deep learning, and creating technology that truly makes an impact.
+                </p>
+                
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-black mb-2">1+</div>
+                        <div class="text-xs sm:text-sm text-gray-500 font-medium tracking-wide uppercase">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-black mb-2">10+</div>
+                        <div class="text-xs sm:text-sm text-gray-500 font-medium tracking-wide uppercase">Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-black mb-2">12+</div>
+                        <div class="text-xs sm:text-sm text-gray-500 font-medium tracking-wide uppercase">Technologies</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl sm:text-4xl font-black text-black mb-2">AI</div>
+                        <div class="text-xs sm:text-sm text-gray-500 font-medium tracking-wide uppercase">Specialist</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
+                    <a href="#projects" class="px-8 sm:px-12 py-4 sm:py-5 bg-black text-white rounded-2xl font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-2xl text-center">
+                        View My Work
+                    </a>
+                    <a href="#aqwelai" class="px-8 sm:px-12 py-4 sm:py-5 border-2 border-black/20 text-black rounded-2xl font-semibold hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105 text-center">
+                        Learn About Aqwel AI
+                    </a>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-8 px-4">
+                    <a href="https://github.com/AkseL588" class="px-4 sm:px-6 py-3 rounded-xl bg-black/5 backdrop-blur-sm border border-black/10 text-black hover:bg-black hover:text-white transition-all duration-300 text-sm sm:text-base" title="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="px-4 sm:px-6 py-3 rounded-xl bg-black/5 backdrop-blur-sm border border-black/10 text-black hover:bg-black hover:text-white transition-all duration-300 text-sm sm:text-base" title="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:akseldeveloper8@gmail.com" class="px-4 sm:px-6 py-3 rounded-xl bg-black/5 backdrop-blur-sm border border-black/10 text-black hover:bg-black hover:text-white transition-all duration-300 text-sm sm:text-base" title="Email">
+                        Email
+                    </a>
+                    <a href="https://aksel588.github.io/aksel_portfolio/" class="px-4 sm:px-6 py-3 rounded-xl bg-black/5 backdrop-blur-sm border border-black/10 text-black hover:bg-black hover:text-white transition-all duration-300 text-sm sm:text-base" title="Portfolio">
+                        Portfolio
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">About Me</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
+    <section id="about" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-black mb-6">About Me</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-semibold text-gray-900">Who I Am</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        I'm **Aksel**, a passionate Junior Back-End Developer and aspiring AI Researcher from **Armenia**, dedicated to building intelligent systems, exploring deep learning, and creating technology that truly makes an impact.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed">
-                        With over **1 year of hands-on experience** in full-stack development, I have built **scalable, maintainable applications** using technologies like **PHP, Laravel, MySQL, and Python**. I thrive on solving real-world problems through code, and I constantly seek to expand my expertise — especially in Artificial Intelligence, automation, and game development.
-                    </p>
-                    <p class="text-gray-600 leading-relaxed">
-                        Currently, I focus on **Artificial Intelligence and Machine Learning**, with a strong focus on modern AI frameworks, large language models, and automation systems. I combine my backend development skills with AI to create next-generation intelligent applications as the founder of **LinkAI**.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="mailto:akseldeveloper8@gmail.com" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                            <i class="fas fa-envelope text-2xl"></i>
-                        </a>
+            
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-black">Who I Am</h3>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            I'm <strong class="text-black">Aksel</strong>, a passionate Junior Back-End Developer and aspiring AI Researcher from <strong class="text-black">Armenia</strong>, 
+                            dedicated to building intelligent systems, exploring deep learning, and creating technology that truly makes an impact.
+                        </p>
+                        <p>
+                            With over <strong class="text-black">1 year of hands-on experience</strong> in full-stack development, I have built <strong class="text-black">scalable, 
+                            maintainable applications</strong> using technologies like <strong class="text-black">PHP, Laravel, MySQL, and Python</strong>. 
+                            I thrive on solving real-world problems through code, and I constantly seek to expand my expertise — 
+                            especially in Artificial Intelligence, automation, and game development.
+                        </p>
+                        <p>
+                                                    Currently, I focus on <strong class="text-black">Artificial Intelligence and Machine Learning</strong>, with a strong focus on modern AI frameworks, 
+                        large language models, and automation systems. I combine my backend development skills with AI to create 
+                        next-generation intelligent applications as the founder of <strong class="text-black">Aqwel AI</strong>.
+                        </p>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 text-white shadow-xl">
-                        <h4 class="text-xl font-semibold mb-4">Quick Facts</h4>
-                        <div class="space-y-3">
-                            <div class="flex justify-between">
-                                <span>Experience:</span>
-                                <span>1+ Years</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>Projects:</span>
-                                <span>10+ Completed</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>Technologies:</span>
-                                <span>12+ Mastered</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>Location:</span>
-                                <span>Armenia</span>
-                            </div>
+                
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 shadow-2xl border border-gray-200">
+                    <h4 class="text-2xl font-bold text-black mb-8">Quick Facts</h4>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center py-4 border-b border-gray-200">
+                            <span class="text-gray-600 font-medium">Experience</span>
+                            <span class="text-black font-bold text-lg">1+ Years</span>
                         </div>
+                        <div class="flex justify-between items-center py-4 border-b border-gray-200">
+                            <span class="text-gray-600 font-medium">Projects</span>
+                            <span class="text-black font-bold text-lg">10+ Completed</span>
+                        </div>
+                        <div class="flex justify-between items-center py-4 border-b border-gray-200">
+                            <span class="text-gray-600 font-medium">Technologies</span>
+                            <span class="text-black font-bold text-lg">12+ Mastered</span>
+                        </div>
+                        <div class="flex justify-between items-center py-4">
+                            <span class="text-gray-600 font-medium">Location</span>
+                            <span class="text-black font-bold text-lg">Armenia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-black mb-6">Skills & Technologies</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">Mastering the tools that power modern AI and web development</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- AI & Machine Learning -->
+                <div class="bg-black text-white rounded-3xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                            <span class="text-black font-black text-2xl">AI</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">AI & Machine Learning</h3>
+                            <p class="text-gray-300 text-sm">Deep Learning & Neural Networks</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">TensorFlow</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">PyTorch</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">LLaMA</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">OpenAI API</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">LangChain</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">RAG</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">NumPy</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="bg-white border-2 border-black rounded-3xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                            <span class="text-white font-black text-2xl">BE</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-black">Backend Development</h3>
+                            <p class="text-gray-600 text-sm">Server-side & API Development</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">PHP</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Laravel</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Python</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">FastAPI</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Django</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Docker</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">REST APIs</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Databases & Storage -->
+                <div class="bg-white border-2 border-black rounded-3xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                            <span class="text-white font-black text-2xl">DB</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-black">Databases & Storage</h3>
+                            <p class="text-gray-600 text-sm">Data Management & Vector Search</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">MySQL</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">MongoDB</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Redis</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Qdrant</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Pinecone</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Weaviate</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Schema Design</span>
+                        <span class="px-3 py-2 bg-gray-100 rounded-xl text-sm font-medium text-black">Performance</span>
+                    </div>
+                </div>
+
+                <!-- Advanced Technologies -->
+                <div class="bg-black text-white rounded-3xl p-8 shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                            <span class="text-black font-black text-2xl">AT</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Advanced Technologies</h3>
+                            <p class="text-gray-300 text-sm">Cutting-edge & Emerging Tech</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">NVIDIA CUDA</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">Triton Server</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">TensorRT</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">GPU Acceleration</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">Telegram Bot</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">Unreal Engine 5</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">C++</span>
+                        <span class="px-3 py-2 bg-white/10 rounded-xl text-sm font-medium">Swift</span>
                     </div>
                 </div>
             </div>
@@ -262,477 +363,345 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gradient-to-br from-teal-50 via-cyan-50 to-emerald-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">My Projects</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                    <div class="h-48 bg-gradient-to-br from-emerald-400 to-teal-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-teal-600/20"></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                            Featured
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">LinkAI - AI Startup</h3>
-                        <p class="text-gray-600 mb-4">Founder of LinkAI, building intelligent tools powered by LLMs and automation. Created linkai-aion Python library for clean AI utilities.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">LLMs</span>
-                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">Automation</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://pypi.org/project/linkai-aion/" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-python"></i> PyPI
-                            </a>
-                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                            Backend
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Casino Game & Profile Manager</h3>
-                        <p class="text-gray-600 mb-4">A comprehensive system that integrates C++ casino games with Python and MongoDB for managing user profiles and shopping systems.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">C++</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                    <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-teal-600/20 to-cyan-600/20"></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                            AI Tool
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Voice-to-Code Assistant</h3>
-                        <p class="text-gray-600 mb-4">An AI-powered tool that converts voice commands into code across multiple programming languages including Python, Java, C++, and JavaScript.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">AI</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Voice Recognition</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20"></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                            Bot
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram Crypto Bot</h3>
-                        <p class="text-gray-600 mb-4">A Telegram bot for cryptocurrency tracking and management with real-time price updates and trading features.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Telegram API</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Crypto API</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fas fa-external-link-alt"></i> Bot
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                    <div class="h-48 bg-gradient-to-br from-cyan-400 to-emerald-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-emerald-600/20"></div>
-                        <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                            AI Translator
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Multilingual Translator</h3>
-                        <p class="text-gray-600 mb-4">AI-powered multilingual translator supporting text, voice, and PDF translation with real-time voice recognition and language detection.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">AI</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Jupyter</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/AkseL588" class="text-emerald-600 hover:text-teal-600 transition-colors">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Skills & Technologies</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- AI & ML -->
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-brain text-2xl text-blue-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI & Machine Learning</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">Python, PyTorch, TensorFlow</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">LLaMA, OpenAI API, LangChain</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">RAG, Vector DBs (Qdrant, Pinecone)</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">NumPy, Pandas, scikit-learn</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">OpenCV, Keras</p>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-green-100 to-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-server text-2xl text-green-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p class="hover:text-teal-600 transition-colors cursor-default">PHP, Laravel, REST APIs</p>
-                        <p class="hover:text-teal-600 transition-colors cursor-default">Eloquent ORM, MVC Architecture</p>
-                        <p class="hover:text-teal-600 transition-colors cursor-default">Python, FastAPI, Django</p>
-                        <p class="hover:text-teal-600 transition-colors cursor-default">Docker, Laravel Sail</p>
-                        <p class="hover:text-teal-600 transition-colors cursor-default">Git, GitHub, CI/CD</p>
-                    </div>
-                </div>
-
-                <!-- Database -->
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-database text-2xl text-purple-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Databases</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p class="hover:text-cyan-600 transition-colors cursor-default">MySQL (Schema, Performance)</p>
-                        <p class="hover:text-cyan-600 transition-colors cursor-default">MongoDB (Document Storage)</p>
-                        <p class="hover:text-cyan-600 transition-colors cursor-default">Redis (Caching)</p>
-                        <p class="hover:text-cyan-600 transition-colors cursor-default">Vector Databases</p>
-                        <p class="hover:text-cyan-600 transition-colors cursor-default">Qdrant, Pinecone, Weaviate</p>
-                    </div>
-                </div>
-
-                <!-- Advanced Tech -->
-                <div class="text-center group">
-                    <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <i class="fas fa-microchip text-2xl text-yellow-600"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Advanced Tech</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">NVIDIA CUDA, Triton Server</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">TensorRT, GPU Acceleration</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">Telegram Bot API</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">Unreal Engine 5, C++</p>
-                        <p class="hover:text-emerald-600 transition-colors cursor-default">Swift, Apple Silicon</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LinkAI Section -->
-    <section id="linkai" class="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-emerald-100/20 via-teal-100/20 to-cyan-100/20"></div>
-        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-cyan-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-20">
-                <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-100 to-teal-100 px-6 py-3 rounded-full mb-6">
-                    <div class="w-3 h-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse"></div>
-                    <span class="text-emerald-700 font-semibold text-sm">AI Startup</span>
-                </div>
-                <h2 class="text-5xl font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-6">About LinkAI</h2>
-                <div class="w-32 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Revolutionizing AI development with cutting-edge solutions and innovative automation tools</p>
+                <h2 class="text-5xl font-black text-black mb-6">Featured Projects</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full"></div>
             </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-black to-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute top-6 right-6 bg-white text-black px-4 py-2 rounded-full text-sm font-bold tracking-wide">
+                            Featured
+                        </span>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-4xl font-black">AI</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Aqwel AI - AI Startup</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Founder of Aqwel AI, building intelligent tools powered by LLMs and automation. Created aqwel-ai Python library for clean AI utilities.</p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">Python</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">LLMs</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">Automation</span>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="https://pypi.org/project/linkai-aion/" class="text-black hover:text-gray-600 transition-colors font-semibold">
+                                PyPI
+                            </a>
+                            <a href="https://github.com/AkseL588" class="text-black hover:text-gray-600 transition-colors font-semibold">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-gray-700 to-gray-900 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute top-6 right-6 bg-white text-black px-4 py-2 rounded-full text-sm font-bold tracking-wide">
+                            Backend
+                        </span>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-4xl font-black">C++</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Casino Game & Profile Manager</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">A comprehensive system that integrates C++ casino games with Python and MongoDB for managing user profiles and shopping systems.</p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">C++</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">Python</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/AkseL588" class="text-black hover:text-gray-600 transition-colors font-semibold">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="h-64 bg-gradient-to-br from-gray-800 to-black relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute top-6 right-6 bg-white text-black px-4 py-2 rounded-full text-sm font-bold tracking-wide">
+                            AI Tool
+                        </span>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-white text-4xl font-black">VOICE</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-black mb-4">Voice-to-Code Assistant</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">An AI-powered tool that converts voice commands into code across multiple programming languages including Python, Java, C++, and JavaScript.</p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">Python</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">AI</span>
+                            <span class="px-4 py-2 bg-gray-100 text-gray-800 text-sm rounded-full font-medium">Voice Recognition</span>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/AkseL588" class="text-black hover:text-gray-600 transition-colors font-semibold">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Main Content Grid -->
-            <div class="grid lg:grid-cols-3 gap-8 mb-16">
-                <!-- Mission Card -->
-                <div class="lg:col-span-2 bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-emerald-100/50 hover:shadow-2xl transition-all duration-500">
-                    <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center">
-                            <i class="fas fa-rocket text-white text-2xl"></i>
+    <!-- Aqwel AI Section -->
+    <section id="aqwelai" class="py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-4 bg-black text-white px-8 py-4 rounded-full mb-8">
+                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                    <span class="font-bold text-sm tracking-wide uppercase">AI Startup</span>
+                </div>
+                <h2 class="text-5xl font-black text-black mb-6">About Aqwel AI</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">Revolutionizing AI development with cutting-edge solutions and innovative automation tools</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12 mb-20">
+                <div class="lg:col-span-2 bg-white rounded-3xl p-12 shadow-2xl border border-gray-200">
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="w-20 h-20 bg-black rounded-3xl flex items-center justify-center">
+                            <span class="text-white font-black text-3xl">M</span>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Our Mission</h3>
-                            <p class="text-emerald-600 font-medium">Building the Future of AI</p>
+                            <h3 class="text-3xl font-bold text-black">Our Mission</h3>
+                            <p class="text-gray-600 font-medium text-lg">Building the Future of AI</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-6 text-lg">
-                        LinkAI is an innovative AI startup co-founded by Aksel, dedicated to developing next-generation intelligent systems and automation solutions. We focus on creating practical, scalable AI tools that solve real-world problems and empower developers worldwide.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-8 text-lg">
-                        Our flagship product, <strong class="text-emerald-600">LinkAI Aion</strong>, is a comprehensive Python library that provides clean, efficient utilities for working with Large Language Models (LLMs), automation workflows, and AI-powered applications.
-                    </p>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            Aqwel AI is an innovative AI startup co-founded by Aksel, dedicated to developing next-generation intelligent systems 
+                            and automation solutions. We focus on creating practical, scalable AI tools that solve real-world problems and 
+                            empower developers worldwide.
+                        </p>
+                        <p>
+                            Our flagship product, <strong class="text-black">Aqwel AI</strong>, is a comprehensive Python library that provides clean, 
+                            efficient utilities for working with Large Language Models (LLMs), automation workflows, and AI-powered applications.
+                        </p>
+                    </div>
                     
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-6">
+                    <div class="grid grid-cols-3 gap-8 mt-12">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-emerald-600 mb-2">100+</div>
-                            <div class="text-sm text-gray-600">Active Users</div>
+                            <div class="text-4xl font-black text-black mb-3">100+</div>
+                            <div class="text-sm text-gray-600 font-medium uppercase tracking-wide">Active Users</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-teal-600 mb-2">50+</div>
-                            <div class="text-sm text-gray-600">Features</div>
+                            <div class="text-4xl font-black text-black mb-3">50+</div>
+                            <div class="text-sm text-gray-600 font-medium uppercase tracking-wide">Features</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-cyan-600 mb-2">24/7</div>
-                            <div class="text-sm text-gray-600">Support</div>
+                            <div class="text-4xl font-black text-black mb-3">24/7</div>
+                            <div class="text-sm text-gray-600 font-medium uppercase tracking-wide">Support</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Features Card -->
-                <div class="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-                    
-                    <h4 class="text-2xl font-bold mb-8 relative z-10">Key Features</h4>
-                    <div class="space-y-6 relative z-10">
+                
+                <div class="bg-black text-white rounded-3xl p-12 shadow-2xl">
+                    <h4 class="text-2xl font-bold mb-10">Key Features</h4>
+                    <div class="space-y-8">
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-brain text-white"></i>
+                            <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">LLM</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">LLM Integration</p>
-                                <p class="text-emerald-100 text-sm leading-relaxed">Seamless OpenAI API and LangChain integration with advanced prompt management</p>
+                                <h5 class="font-bold text-lg mb-2">LLM Integration</h5>
+                                <p class="text-gray-300 text-sm leading-relaxed">Seamless OpenAI API and LangChain integration with advanced prompt management</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-cogs text-white"></i>
+                            <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">AUTO</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">Automation Tools</p>
-                                <p class="text-teal-100 text-sm leading-relaxed">Powerful workflow automation capabilities with custom triggers and actions</p>
+                                <h5 class="font-bold text-lg mb-2">Automation Tools</h5>
+                                <p class="text-gray-300 text-sm leading-relaxed">Powerful workflow automation capabilities with custom triggers and actions</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-database text-white"></i>
+                            <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-white font-bold text-lg">VEC</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-lg">Vector Databases</p>
-                                <p class="text-cyan-100 text-sm leading-relaxed">RAG implementation with Qdrant and Pinecone for intelligent search</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-code text-white"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-lg">Clean Architecture</p>
-                                <p class="text-emerald-100 text-sm leading-relaxed">Well-structured, maintainable codebase with comprehensive documentation</p>
+                                <h5 class="font-bold text-lg mb-2">Vector Databases</h5>
+                                <p class="text-gray-300 text-sm leading-relaxed">RAG implementation with Qdrant and Pinecone for intelligent search</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Bottom Section -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Core Values -->
-                <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-teal-100/50">
-                    <h4 class="text-2xl font-bold text-gray-900 mb-8">Core Values</h4>
+    <!-- Aion Library Section -->
+    <section id="aion" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center space-x-4 bg-black text-white px-8 py-4 rounded-full mb-8">
+                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                    <span class="font-bold text-sm tracking-wide uppercase">Python Library</span>
+                </div>
+                <h2 class="text-5xl font-black text-black mb-6">Aion Library</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">A lightweight, modular Python library designed for clean AI utilities and seamless LLM integration</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-black">What is Aion?</h3>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            <strong class="text-black">Aion</strong> is our flagship Python library that simplifies AI development by providing clean, 
+                            efficient utilities for working with Large Language Models (LLMs), automation workflows, and AI-powered applications.
+                        </p>
+                        <p>
+                            Built with modern Python practices, Aion offers a modular architecture that makes it easy to integrate 
+                            AI capabilities into your projects without the complexity of managing multiple dependencies.
+                        </p>
+                        <p>
+                            Whether you're building chatbots, automation tools, or complex AI workflows, Aion provides the building blocks 
+                            you need to create intelligent applications quickly and efficiently.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://linkaiapps.com/#linkai-aion" class="px-8 py-4 bg-black text-white rounded-2xl font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            🌐 Visit Website
+                        </a>
+                        <a href="https://pypi.org/project/linkai-aion/" class="px-8 py-4 bg-white border-2 border-black text-black rounded-2xl font-semibold hover:bg-black hover:text-white transition-all duration-300">
+                            📦 Install from PyPI
+                        </a>
+                        <a href="https://github.com/AkseL588/aion" class="px-8 py-4 border-2 border-gray-300 text-black rounded-2xl font-semibold hover:border-black transition-all duration-300">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-3xl p-12 shadow-2xl border border-gray-200">
+                    <h4 class="text-2xl font-bold text-black mb-8">Core Capabilities</h4>
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-lightbulb text-white"></i>
+                            <div class="w-12 h-12 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">AI</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Innovation</p>
-                                <p class="text-gray-600 text-sm">Pushing boundaries in AI technology</p>
+                                <h5 class="font-bold text-black text-lg">LLM Integration</h5>
+                                <p class="text-gray-600 text-sm">OpenAI, Anthropic, and custom model support</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-users text-white"></i>
+                            <div class="w-12 h-12 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">RAG</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Community</p>
-                                <p class="text-gray-600 text-sm">Open source collaboration and support</p>
+                                <h5 class="font-bold text-black text-lg">Vector Search</h5>
+                                <p class="text-gray-600 text-sm">Built-in support for Qdrant and Pinecone</p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-shield-alt text-white"></i>
+                            <div class="w-12 h-12 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">AUTO</span>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Quality</p>
-                                <p class="text-gray-600 text-sm">Enterprise-grade reliability and performance</p>
+                                <h5 class="font-bold text-black text-lg">Workflow Automation</h5>
+                                <p class="text-gray-600 text-sm">Custom triggers and action pipelines</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">API</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-black text-lg">REST API Builder</h5>
+                                <p class="text-gray-600 text-sm">Generate APIs from your AI workflows</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Links & Resources -->
-                <div class="bg-gradient-to-br from-teal-600 via-cyan-600 to-emerald-600 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 -translate-x-10"></div>
-                    
-                    <h4 class="text-2xl font-bold mb-8 relative z-10">Get Started</h4>
-                    <p class="text-emerald-100 mb-8 relative z-10">Join our community and start building with LinkAI Aion today.</p>
-                    
-                    <div class="space-y-4 relative z-10">
-                        <a href="https://pypi.org/project/linkai-aion/" class="flex items-center justify-between bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-4 rounded-xl transition-all duration-300 group">
-                            <div class="flex items-center space-x-4">
-                                <i class="fab fa-python text-2xl"></i>
-                                <div>
-                                    <p class="font-semibold">Install from PyPI</p>
-                                    <p class="text-emerald-100 text-sm">pip install linkai-aion</p>
-                                </div>
-                            </div>
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                        
-                        <a href="https://github.com/AkseL588" class="flex items-center justify-between bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-4 rounded-xl transition-all duration-300 group">
-                            <div class="flex items-center space-x-4">
-                                <i class="fab fa-github text-2xl"></i>
-                                <div>
-                                    <p class="font-semibold">View on GitHub</p>
-                                    <p class="text-teal-100 text-sm">Open source repository</p>
-                                </div>
-                            </div>
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                        </a>
+            </div>
+            
+            <!-- Code Example -->
+            <div class="bg-black rounded-3xl p-12 shadow-2xl">
+                <div class="flex items-center justify-between mb-8">
+                    <h4 class="text-2xl font-bold text-white">Quick Start Example</h4>
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
                     </div>
+                </div>
+                <div class="bg-gray-900 rounded-2xl p-6 overflow-x-auto">
+                    <pre class="text-white text-sm"><code># Install Aion
+pip install aion
+
+# Simple LLM integration
+from aion import LLMClient
+
+client = LLMClient(api_key="your-key")
+response = client.chat("Hello, how are you?")
+
+print(response.content)
+# Output: Hello! I'm doing well, thank you for asking...</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gradient-to-br from-white via-emerald-50 to-teal-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Experience & Timeline</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
-                <p class="text-gray-600 mt-4">My journey in technology and AI development</p>
+    <section id="experience" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-black mb-6">Experience & Timeline</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">My journey in technology and AI development</p>
             </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <!-- Experience Item 1 -->
-                    <div class="flex items-start space-x-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-rocket text-white text-lg"></i>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="space-y-12">
+                    <div class="flex items-start space-x-8">
+                        <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-black text-xl">C</span>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Co-Founder</h3>
-                            <p class="text-emerald-600 font-medium mb-1">LinkAI • Full-time</p>
-                            <p class="text-gray-500 text-sm mb-3">Jul 2025 - Present • 2 mos</p>
-                            <p class="text-gray-600 leading-relaxed">
-                                Co-founding LinkAI, leading startup ventures and startup leadership. 
+                            <h3 class="text-2xl font-bold text-black mb-3">Co-Founder</h3>
+                            <p class="text-black font-semibold text-lg mb-2">Aqwel AI • Full-time</p>
+                            <p class="text-gray-500 text-sm mb-4 tracking-wide">Jul 2025 - Present • 2 mos</p>
+                            <p class="text-gray-600 leading-relaxed text-lg">
+                                Co-founding Aqwel AI, leading startup ventures and startup leadership. 
                                 Managing global IT operations and driving innovation in AI technology solutions.
                             </p>
-                            <div class="mt-3">
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">Start-up Ventures</span>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">Start-up Leadership</span>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+6 skills</span>
+                            <div class="mt-6">
+                                <span class="inline-block bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full mr-3 mb-2 font-medium">Start-up Ventures</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full mr-3 mb-2 font-medium">Start-up Leadership</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Experience Item 2 -->
-                    <div class="flex items-start space-x-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-building text-white text-lg"></i>
+                    
+                    <div class="flex items-start space-x-8">
+                        <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-black text-xl">B</span>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Back End Developer</h3>
-                            <p class="text-teal-600 font-medium mb-1">Global IT Company • Part-time</p>
-                            <p class="text-gray-500 text-sm mb-3">Nov 2024 - Present • 10 mos</p>
-                            <p class="text-gray-600 leading-relaxed">
+                            <h3 class="text-2xl font-bold text-black mb-3">Back End Developer</h3>
+                            <p class="text-black font-semibold text-lg mb-2">Global IT Company • Part-time</p>
+                            <p class="text-gray-500 text-sm mb-4 tracking-wide">Nov 2024 - Present • 10 mos</p>
+                            <p class="text-gray-600 leading-relaxed text-lg">
                                 Working as a part-time backend developer, specializing in PHP and MySQL development. 
                                 Contributing to global IT projects and maintaining high-quality code standards.
                             </p>
-                            <div class="mt-3">
-                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">PHP</span>
-                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">MySQL</span>
-                                <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+1 skill</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 3 -->
-                    <div class="flex items-start space-x-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-code text-white text-lg"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Back End Developer</h3>
-                            <p class="text-cyan-600 font-medium mb-1">Internship</p>
-                            <p class="text-gray-500 text-sm mb-3">Sep 2024 - Nov 2024 • 3 mos</p>
-                            <p class="text-gray-600 leading-relaxed">
-                                Completed a 3-month internship as a backend developer, gaining hands-on experience with 
-                                AJAX, JavaScript, and various web development technologies.
-                            </p>
-                            <div class="mt-3">
-                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">AJAX</span>
-                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">JavaScript</span>
-                                <span class="inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+10 skills</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education Item -->
-                    <div class="flex items-start space-x-6">
-                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-graduation-cap text-white text-lg"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Web Developer</h3>
-                            <p class="text-emerald-600 font-medium mb-1">DiGi School</p>
-                            <p class="text-gray-500 text-sm mb-3">May 2023 - Dec 2023</p>
-                            <p class="text-gray-600 leading-relaxed">
-                                Completed comprehensive web development training at DiGi School, 
-                                mastering JavaScript, HTML5, and various modern web technologies.
-                            </p>
-                            <div class="mt-3">
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">JavaScript</span>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">HTML5</span>
-                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">+14 skills</span>
+                            <div class="mt-6">
+                                <span class="inline-block bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full mr-3 mb-2 font-medium">PHP</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full mr-3 mb-2 font-medium">MySQL</span>
                             </div>
                         </div>
                     </div>
@@ -741,178 +710,151 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-br from-teal-50 via-cyan-50 to-emerald-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Services I Offer</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mx-auto rounded-full"></div>
-                <p class="text-gray-600 mt-4">Comprehensive solutions for your AI and development needs</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-black mb-6">Let's Connect!</h2>
+                <div class="w-32 h-1 bg-black mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">Ready to collaborate on your next project?</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-emerald-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Custom AI solutions including LLM integration, automation workflows, and intelligent applications using modern frameworks.
-                    </p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>LLM Integration</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>Automation Systems</li>
-                        <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2"></i>RAG Implementation</li>
-                    </ul>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-teal-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-server text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Scalable backend systems, APIs, and database architectures using PHP, Laravel, Python, and modern development practices.
-                    </p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>REST APIs</li>
-                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>Database Design</li>
-                        <li class="flex items-center"><i class="fas fa-check text-teal-500 mr-2"></i>System Architecture</li>
-                    </ul>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-cogs text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Consulting</h3>
-                    <p class="text-gray-600 mb-6">
-                        Technical consulting for AI implementation, system optimization, and technology strategy for startups and businesses.
-                    </p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>AI Strategy</li>
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>Technical Planning</li>
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-500 mr-2"></i>Performance Optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-br from-emerald-950 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 via-teal-600/10 to-cyan-600/10"></div>
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400"></div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-emerald-500/10 rounded-full blur-xl"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 bg-teal-500/10 rounded-full blur-xl"></div>
-        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Main Footer Content -->
-            <div class="py-20">
-                <div class="grid lg:grid-cols-3 gap-12">
-                    <!-- Brand Section -->
-                    <div class="lg:col-span-2">
-                        <div class="flex items-center mb-8">
-                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 rounded-2xl flex items-center justify-center mr-6 shadow-xl">
-                                <i class="fas fa-robot text-white text-2xl"></i>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold text-black">Get In Touch</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">I'm always open to new challenges and partnerships in AI development, backend tooling, automation, and more.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-6">
+                            <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-xl">E</span>
                             </div>
                             <div>
-                                <h3 class="text-3xl font-bold bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">Aksel</h3>
-                                <p class="text-emerald-200 text-lg font-medium">LinkAI Founder & AI Innovator</p>
+                                <h4 class="font-bold text-black text-lg">Email</h4>
+                                <a href="mailto:akseldeveloper8@gmail.com" class="text-gray-600 hover:text-black transition-colors text-lg">akseldeveloper8@gmail.com</a>
                             </div>
                         </div>
-                        <p class="text-emerald-100 mb-8 leading-relaxed text-lg">
-                            Founder of LinkAI, an innovative AI startup dedicated to building intelligent systems and automation solutions. 
-                            We develop next-generation AI tools that solve real-world problems, with our flagship product linkai-aion available on PyPI.
-                        </p>
-                        <div class="flex space-x-6">
-                            <a href="https://github.com/AkseL588" class="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="GitHub">
-                                <i class="fab fa-github text-2xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="group bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="LinkedIn">
-                                <i class="fab fa-linkedin text-2xl"></i>
-                            </a>
-                            <a href="https://aksel588.github.io/aksel_portfolio/" class="group bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="Portfolio">
-                                <i class="fas fa-globe text-2xl"></i>
-                            </a>
-                            <a href="mailto:akseldeveloper8@gmail.com" class="group bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white p-4 rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg" title="Email">
-                                <i class="fas fa-envelope text-2xl"></i>
-                            </a>
+                        
+                        <div class="flex items-center space-x-6">
+                            <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-xl">L</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/aksel-aghajanyan/" class="text-gray-600 hover:text-black transition-colors text-lg">linkedin.com/in/aksel-aghajanyan</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6">
+                            <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center">
+                                <span class="text-white font-bold text-xl">G</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg">GitHub</h4>
+                                <a href="https://github.com/AkseL588" class="text-gray-600 hover:text-black transition-colors text-lg">github.com/AkseL588</a>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="bg-black text-white rounded-3xl p-12 shadow-2xl">
+                    <h3 class="text-3xl font-bold mb-6">Motto</h3>
+                    <p class="text-xl leading-relaxed">"Let's code, collaborate, and build the future — one line at a time."</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Quick Links -->
-                    <div class="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/20">
-                        <h4 class="text-xl font-bold mb-6 text-white">Quick Links</h4>
-                        <div class="space-y-4">
-                            <a href="#home" class="block text-emerald-100 hover:text-white transition-colors font-medium">Home</a>
-                            <a href="#about" class="block text-emerald-100 hover:text-white transition-colors font-medium">About</a>
-                            <a href="#projects" class="block text-emerald-100 hover:text-white transition-colors font-medium">Projects</a>
-                            <a href="#skills" class="block text-emerald-100 hover:text-white transition-colors font-medium">Skills</a>
-                            <a href="#experience" class="block text-emerald-100 hover:text-white transition-colors font-medium">Experience</a>
-                            <a href="#services" class="block text-emerald-100 hover:text-white transition-colors font-medium">Services</a>
-                            <a href="#linkai" class="block text-emerald-100 hover:text-white transition-colors font-medium">LinkAI</a>
-
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 mb-12">
+                <div>
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                            <span class="text-black font-black text-2xl">A</span>
                         </div>
+                        <div>
+                            <h3 class="text-3xl font-black">Aksel</h3>
+                            <p class="text-gray-300 font-medium tracking-wide uppercase">Aqwel AI Founder & AI Innovator</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Founder of Aqwel AI, an innovative AI startup dedicated to building intelligent systems and automation solutions. 
+                        We develop next-generation AI tools that solve real-world problems.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-8">Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium">Home</a>
+                        <a href="#about" class="text-gray-300 hover:text-white transition-colors font-medium">About</a>
+                        <a href="#skills" class="text-gray-300 hover:text-white transition-colors font-medium">Skills</a>
+                        <a href="#projects" class="text-gray-300 hover:text-white transition-colors font-medium">Projects</a>
+                        <a href="#experience" class="text-gray-300 hover:text-white transition-colors font-medium">Experience</a>
+                        <a href="#aqwelai" class="text-gray-300 hover:text-white transition-colors font-medium">Aqwel AI</a>
+                        <a href="#contact" class="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
                     </div>
                 </div>
             </div>
-
-            <!-- LinkAI Products Section -->
-            <div class="py-12 border-t border-emerald-400/20">
-                <div class="text-center mb-8">
-                    <h4 class="text-2xl font-bold text-white mb-2">LinkAI Products</h4>
-                    <p class="text-emerald-200">Building the future of AI-powered solutions</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-gradient-to-br from-emerald-700/50 to-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/20 text-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fab fa-python text-white text-xl"></i>
-                        </div>
-                        <h5 class="text-lg font-semibold text-white mb-2">Python Library</h5>
-                        <p class="text-emerald-200 text-sm">linkai-aion</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-teal-700/50 to-cyan-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-400/20 text-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-brain text-white text-xl"></i>
-                        </div>
-                        <h5 class="text-lg font-semibold text-white mb-2">AI Solutions</h5>
-                        <p class="text-teal-200 text-sm">LLMs & Automation</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-cyan-700/50 to-emerald-700/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/20 text-center">
-                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-code text-white text-xl"></i>
-                        </div>
-                        <h5 class="text-lg font-semibold text-white mb-2">Open Source</h5>
-                        <p class="text-cyan-200 text-sm">Available on PyPI</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Section -->
-            <div class="border-t border-emerald-400/20 py-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-4 md:mb-0">
-                        <p class="text-emerald-300 text-sm">&copy; 2024 Aksel Aghajanyan. All rights reserved.</p>
-                    </div>
-                    <div class="flex space-x-8">
-                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Privacy Policy</a>
-                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Terms of Service</a>
-                        <a href="#" class="text-emerald-300 hover:text-white text-sm transition-colors font-medium">Cookie Policy</a>
-                    </div>
-                </div>
+            
+            <div class="border-t border-gray-800 pt-12 text-center">
+                <p class="text-gray-300">&copy; 2024 Aksel Aghajanyan. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileCloseButton = document.getElementById('mobile-close-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // Open mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+        
+        // Close mobile menu
+        mobileCloseButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+        
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 </html> 
